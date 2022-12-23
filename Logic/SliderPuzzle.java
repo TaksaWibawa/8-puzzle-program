@@ -1,9 +1,10 @@
 package Logic;
 
-import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SliderPuzzle extends JFrame implements ActionListener{
@@ -135,7 +136,6 @@ public class SliderPuzzle extends JFrame implements ActionListener{
 
             resetClick();
         }
-
         if(e.getSource() == solution){
             Logic puzzle = new Logic(solutionList);
             System.out.println(solutionList);
@@ -310,7 +310,6 @@ public class SliderPuzzle extends JFrame implements ActionListener{
         }
         addClick();
     }
-
     public void resetClick(){
         counter = -1;
         counterLabel.setText("Moves: 0");
